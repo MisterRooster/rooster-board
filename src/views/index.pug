@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  ul(class="message-list")
+    each message in messages
+      li(class="message-container")
+        div(class="user-heading-text")
+          p(class="message-user") #[strong !{message.user}]
+          -
+          p(class="message-timestamp") #[em !{message.added}]
+        p(class="message-text") !{message.text}
+    else
+      li There are no messages.
+
+  a(href="/new"): button(class="add-message-button") + New Message

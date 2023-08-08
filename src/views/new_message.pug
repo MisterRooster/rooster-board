@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1.send-message-header New Message:
+  form.send-message-form(method='POST' action='/new')
+    label(for='user-name') Name:
+    input#user-name(type='text', placeholder='your name..' name='messageUser' maxlength="100" required)
+
+    label(for='user-message') Text:
+    textarea#user-message(type='text', placeholder='message text..' name='messageText' maxlength="1000" required)
+
+    div.form-buttons
+      button#submit-button(type='submit') Send
+      a.return-button(href="/") Cancel
