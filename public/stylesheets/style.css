@@ -180,6 +180,7 @@ button:hover, .return-button:hover {
 }
 
 .message-empty {
+  color: var(--color-secondary);
   font-size: large;
   text-align: center;
 }
