@@ -1,14 +1,19 @@
 extends layout
 
 block content
-  h1.send-message-header New Message:
+  h1.send-message-header New Message
   form.send-message-form(method='POST' action='/new')
     label(for='user-name') Name:
-    input#user-name(type='text', placeholder='your name..' name='messageUser' maxlength="100" required)
+    input#user-name(type='text', placeholder='your name..' name='user' maxlength="100" required='true' value=(message===undefined ? '' : message.user))
 
     label(for='user-message') Text:
-    textarea#user-message(type='text', placeholder='message text..' name='messageText' maxlength="1000" required)
-
+    textarea#user-message(type='text', placeholder='message text..' name='text' maxlength="1000")
+      |#{(message!==undefined)?message.text:''}
     div.form-buttons
       button#submit-button(type='submit') Send
       a.return-button(href="/") Cancel
+
+  if errors
+    ul
+      for error in errors
+        li.validation-error-msg!= error.msg

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h2#about-header What is this?
+
+  p.about-content
+   |The purpose of this project is to demonstrate how to use an express server with a database and
+   |serverside rendering.<br>Here MongoDB is used as a database provided via MongoDB Atlas.
+   |<br>The following technology stack is used:
+  
+  ul.about-list
+    li NodeJS
+    li ExpressJS
+    li Typescript
+    li MongoDB via mongoose
+    li Serverside rendering with PugJS template engine
+    li HTML5 canvas for background rendering on the clientside
+
+  p.about-more Visit the #[a(href="https://github.com/MisterRooster/rooster-board") Github repository] to check out the source code.
+    |<br>Feel free to check out my other Projects on my #[a(href="https://github.com/MisterRooster") Github account].
+  
+  a.about-return-button(href="/") Go Back
