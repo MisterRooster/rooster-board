@@ -10,7 +10,7 @@ export const index_get = asyncHandler(async (
   res: Response,
   next: NextFunction
 ) => {
-  const { limit = 10, since = 0 } = req.query;
+  const { limit = 1000, since = 0 } = req.query;
   try {
     const messages_list = await Message.find()
       .sort({added:1})
