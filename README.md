@@ -1,4 +1,4 @@
-# Express Message Board
+# Rooster Board
 
 ![NodeJS shield](https://img.shields.io/badge/nodejs-339933?logo=nodedotjs&logoColor=white&link=https%3A%2F%2Fnodejs.org%2F)
 ![Express shield](https://img.shields.io/badge/express-black?logo=express&logoColor=white&link=https%3A%2F%2Fnodejs.org%2F)
@@ -27,13 +27,13 @@ a learning resource.
 After that clone the repository locally (if you havent already):
 
 ```bash
-git clone git@github.com:MisterRooster/web-dev-samples.git
+git clone git@github.com:MisterRooster/rooster-board.git
 ```
 
 Then move to the project directory and install dependencies:
 
 ```bash
-cd web-dev-samples/express-message-board
+cd rooster-board
 npm install
 ```
 
