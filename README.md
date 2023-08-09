@@ -8,7 +8,7 @@
 ![TS shield](https://img.shields.io/badge/typescript-3178C6?logo=typescript&logoColor=white&link=https%3A%2F%2Fnodejs.org%2F)
 
 Simple message board using serverside rendering and a database that allows users to write messages on a public board.
-Users can create new messages which than gets stored in a MongoDB atlas instance.
+Users can create new messages which than gets stored in a MongoDB database instance.
 
 This Projects main purpose was to practice full-stack development. Feel free to use it as an inspiration or as
 a learning resource.
