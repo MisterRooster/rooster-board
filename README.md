@@ -1,3 +1,5 @@
+![Preview](preview.png)
+
 # Rooster Board
 
 ![NodeJS shield](https://img.shields.io/badge/nodejs-339933?logo=nodedotjs&logoColor=white&link=https%3A%2F%2Fnodejs.org%2F)
