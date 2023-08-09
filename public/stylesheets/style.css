@@ -1,5 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Bitter:wght@400;600;700&family=Oxygen+Mono&display=swap');
+
 html {
-  --color-primary: rgb(64, 41, 77);
+  --col-back-blue-1: rgb(0, 73, 80);
+  --col-back-blue-2: rgb(0, 47, 51);
+  --col-back-orange-1: rgb(80, 35, 0);
+  --col-back-orange-2: rgb(55, 24, 0);
+  --col-back-green-1: rgb(46, 75, 0);
+  --col-back-green-2: rgb(32, 52, 0);
+  --col-back-purple-1: rgb(115, 0, 81);
+  --col-back-purple-2: rgb(70, 0, 49);
+  --col-back-1: var(--col-back-blue-1);
+  --col-back-2: var(--col-back-blue-2);
+
+  --color-primary: var(--col-back-1);
   --color-secondary: rgb(156, 151, 121);
   --color-text-primary: white;
   --color-text-secondary: var(--color-dark-grey);
@@ -8,6 +21,28 @@ html {
 
 a {
   color: var(--color-secondary);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--color-dark-grey);
+  border-radius: 3px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--col-back-2);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--col-back-1);
 }
 
 body {
@@ -21,7 +56,8 @@ body {
   margin: auto;
   padding: 0;
   height: 100vh;
-  font: 1em "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Bitter', "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 1em;
 }
 
 #main-background {
@@ -46,6 +82,7 @@ body {
 }
 
 .main-header {
+  font-family: 'Aldrich', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--color-dark-grey);
   width: 100%;
   height: 70px;
@@ -55,15 +92,71 @@ body {
 }
 
 .main-header-text {
+  padding-left: 10px;
   flex:1;
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
   color: var(--color-secondary);
 }
 
+@media only screen and (min-width: 600px) {
+  .main-header-text {
+    font-size: 2.5em;
+    padding-left: 48px;
+  }
+}
+
+.main-header-text-2 {
+  color: var(--color-primary);
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 3px;
+}
+
+.theme-btn {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  margin: 1px;
+  border: none;
+}
+
+.theme-btn:hover {
+  border: none;
+}
+
+.theme-btn.blue {
+  background-color: var(--col-back-blue-2);
+}
+.theme-btn.blue:hover {
+  background-color: var(--col-back-blue-1);
+}
+.theme-btn.orange {
+  background-color: var(--col-back-orange-2);
+}
+.theme-btn.orange:hover {
+  background-color: var(--col-back-orange-1);
+}
+.theme-btn.green {
+  background-color: var(--col-back-green-2);
+}
+.theme-btn.green:hover {
+  background-color: var(--col-back-green-1);
+}
+.theme-btn.purple {
+  background-color: var(--col-back-purple-2);
+}
+.theme-btn.purple:hover {
+  background-color: var(--col-back-purple-1);
+}
+
 .header-info-btn {
   margin-right: 1em;
-  padding:0.5em;
+  padding:0.8em;
   font-size: 1em;
   font-weight: 400;
   background-color: var(--color-secondary);
@@ -86,6 +179,7 @@ body {
 }
 
 .main-footer {
+  font-family: 'Oxygen Mono' ,'Courier New', Courier, monospace;
   background-color: var(--color-dark-grey);
   width: 100%;
   height: 35px;
@@ -144,7 +238,7 @@ button:hover, .return-button:hover {
   height: auto;
   color: var(--color-text-secondary);
   border: 1px solid var(--color-text-secondary);
-  backdrop-filter: invert(90%) hue-rotate(-40deg) blur(5px);
+  backdrop-filter:   brightness(2.5) grayscale(20%) sepia(100%) blur(10px);
   border-radius: 5px;
   margin: 0;
   margin-bottom: 2vh;
