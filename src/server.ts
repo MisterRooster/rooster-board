@@ -23,7 +23,7 @@ class Server {
 
     // support reverse proxies for render.com deployments
     if('RENDER' in process.env && process.env.NODE_ENV === 'production') { 
-      this.exp_app.set('trust proxy', 2)
+      this.exp_app.set('trust proxy', 3);
     }
 
     this.connectToDB();
