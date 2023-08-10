@@ -42,7 +42,7 @@ class Server {
   }
 
   private setupViewEngine() {
-    this.exp_app.set('views', path.join(__dirname, 'views'));
+    this.exp_app.set('views', path.join(__dirname + '/../src', 'views')); // path also supports dist
     this.exp_app.set('view engine', 'pug')
   }
 

@@ -39,19 +39,19 @@ cd rooster-board
 npm install
 ```
 
-Now copy the `.env.example` environment configuration file as `.env` at the root of the project and add your cluster connection string url `DB_URL` (replace your username and password) and database name `DB_NAME`:
+Now copy the `.env.example` environment configuration file as `.env` at the root of the project and add your cluster connection string url `DB_URL` (replace your username and password):
 
 ```bash
 DB_URI=mongodb+srv://<username>:<password>@<clustername>.mongodb.net/
 ```
-You can also change the server port via `PORT` and node environment variable `NODE_ENV` here if you like.
+You can optionally change the server port via `PORT`, node environment variable `NODE_ENV` and database name ``DB_NAME` here if you like.
 For a local MongoDB installation the string looks like the following (no authentication needed):
 
 ```bash
 DB_URI=mongodb://127.0.0.1:27017
 ```
 
-Then start the server locally with the following command:
+Then build and start the server locally with the following command:
 
 ```bash
 npm deploy
