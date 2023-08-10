@@ -75,7 +75,6 @@ class Server {
     this.exp_app.use(express.static(path.join(__dirname, './../public')));
 
     // dynamic routes
-    this.exp_app.get('/ip', (request, response) => response.send(request.ip))
     this.exp_app.use('/', indexRouter);
     this.exp_app.use('/new', messageRouter);
 
