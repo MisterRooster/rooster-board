@@ -21,6 +21,11 @@ class Server {
     this.port = this.normalizePort(process.env.PORT || '3000');
     this.exp_app.set('port', this.port);
 
+    // support reverse proxies for render.com deployments
+    if('RENDER' in process.env && process.env.NODE_ENV === 'production') { 
+      this.exp_app.set('trust proxy', 1)
+    }
+
     this.connectToDB();
     this.setupViewEngine();
     this.connectMiddlewares();
@@ -70,6 +75,7 @@ class Server {
     this.exp_app.use(express.static(path.join(__dirname, './../public')));
 
     // dynamic routes
+    this.exp_app.get('/ip', (request, response) => response.send(request.ip))
     this.exp_app.use('/', indexRouter);
     this.exp_app.use('/new', messageRouter);
 
