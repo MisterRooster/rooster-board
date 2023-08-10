@@ -1,12 +1,12 @@
 doctype html
 html(lang='en')
   head
-    title= title
     meta(charset='utf-8')
     link(rel='icon', href="favicon.ico")
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='/javascripts/render_theme.js' defer)
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='./css/style.css')
+    script(src='./js/render_theme.js' defer)
+    title= title
   body
     include header.pug
     canvas#main-background Your browser does not support the canvas element.

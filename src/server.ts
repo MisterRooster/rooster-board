@@ -67,7 +67,7 @@ class Server {
 
   private connectRoutes() {
     // static files
-    this.exp_app.use(express.static(path.join(__dirname, '../public')));
+    this.exp_app.use(express.static(path.join(__dirname, './../public')));
 
     // dynamic routes
     this.exp_app.use('/', indexRouter);
