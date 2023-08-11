@@ -17,6 +17,9 @@ html {
   --color-text-primary: white;
   --color-text-secondary: var(--color-dark-grey);
   --color-dark-grey: rgb(25, 25, 25);
+
+  width: 100%;
+  height: 100%;
 }
 
 a {
@@ -46,16 +49,17 @@ a {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   padding: 2vw;
-  width: 100vw;
+  width: 100%;
+  min-height: 100%;
   min-width: 320px;
   overflow: none;
   margin: auto;
   padding: 0;
-  height: 100vh;
   font-family: 'Bitter', "Lucida Grande", Helvetica, Arial, serif;
   font-size: 1em;
 }
@@ -64,20 +68,23 @@ body {
   z-index: -1;
   position: absolute;
   width: 100%;
-  min-width: 320px;
-  height: calc(100vh - 105px);
+  min-height: calc(100% - 132px);
   left: 0;
   top: 70px;
   background-color: black;
 }
 
+@media only screen and (min-width: 600px) {
+  #main-background { height: calc(100% - 105px); }
+}
+
 .main-container {
   z-index: 1;
+  flex: 1;
   width: 100%;
-  height: calc(100vh - 105px);
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  flex: 1;
   align-items: center;
 }
 
@@ -92,6 +99,7 @@ body {
 }
 
 .main-header-text {
+  margin: 0;
   padding-left: 10px;
   flex:1;
   font-size: 1.5em;
@@ -107,6 +115,7 @@ body {
 }
 
 .main-header-text-2 {
+  margin: 0;
   color: var(--color-primary);
 }
 
@@ -182,14 +191,36 @@ body {
   font-family: 'Oxygen Mono', 'Courier New', Courier, monospace;
   background-color: var(--color-dark-grey);
   width: 100%;
-  height: 35px;
+  height: 62px;
   box-shadow: 0 -0.3em 0.4em rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 }
 
 .main-footer-text {
   color: var(--color-secondary);
   font-size: 0.8em;
   text-align: center;
+  margin-bottom: 0;
+}
+
+.repo-link {
+  color: var(--color-secondary);
+  font-size: 0.8em;
+  text-align: center;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .main-footer {
+    height: 35px;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  .main-footer-text { margin: 0; margin-top: 0.5em; }
+  .repo-link { margin: 0; margin-left: 1em; }
 }
 
 button, .return-button {
@@ -229,6 +260,7 @@ button:hover, .return-button:hover {
 .message-list {
   overflow-y: auto;
   width: 75vw;
+  max-height: calc(100vh - 172px);
   padding: 0;
 }
 
@@ -364,6 +396,7 @@ input {
     0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
   text-align: center;
   text-decoration: none;
+  margin-bottom: 1em;
 }
 
 .error-return-button:hover, .about-return-button:hover {
