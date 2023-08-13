@@ -25,7 +25,7 @@ a learning resource.
 ## How to run it locally
 
  As a prerequisite you must either have [MongoDB Community Server](https://www.mongodb.com/try/download/community) installed locally or have an MongoDB Atlas account (you can create one for free [here](https://www.mongodb.com/cloud/atlas/register)).
- Also make sure to have NodeJS version `16.17.0` or above installed.
+ Also make sure to have NodeJS version `18.17.0` or above installed.
 
 After that clone the repository locally (if you havent already):
 
