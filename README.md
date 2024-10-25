@@ -1,5 +1,3 @@
-![Preview](preview.png)
-[▶ Live Preview](https://rooster-board.onrender.com)
 
 # Rooster Board
 
